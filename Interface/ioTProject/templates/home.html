@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="15">
+    <title>3D Printer Moniter</title>
+    <style>
+		title {
+    display: none;
+  }
+  .head{
+    font-size:30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {  
+    text-align: center;  
+    padding: 23px;  
+    background-color:rgb(217, 229, 237);  
+    color: rgb(2, 23, 142);  
+    border-radius: 15px;
+    border :rgb(6, 90, 103) solid 2px;
+} 
+body {
+    background:linear-gradient(rgb(243, 184, 177),rgb(255, 187, 163));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  } 
+
+.floatRight{float:right;margin-left:10px}
+
+.first{
+    background:linear-gradient(rgb(199, 211, 176),rgb(168, 213, 180));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 15px;
+    border :rgb(6, 90, 103) solid 2px;
+    width:20%;
+    margin:7px;
+    padding: 7px;
+    text-align: left;
+    color:black;
+    font-size: 20px;
+
+}
+.second{
+    background:linear-gradient(rgb(229, 184, 142),rgb(238, 219, 135));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-radius: 15px;
+    border :rgb(6, 90, 103) solid 2px;
+    width:20%;
+    margin:7px;
+    padding: 7px;
+    text-align: left;
+    color:black;
+    font-size: 20px;
+
+}
+</style>
+</head>
+<body>
+    <h1 class="head">3D Printer Monitering</h1>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD3Rs55ebrBQLyNq07fabbp0QSScsV6xogzg&usqp=CAU" class="floatRight">
+    <div class="first">
+        <div class="val-head">
+        <h2> Last Values At {{now}}</h2>
+        </div>
+        <div class="val">{{x}}</div>
+        <div class="val">{{y}}</div>
+        <div class="val">{{z}}</div>
+    </div>
+    <div class="second">
+        <div class="val-head">
+        <h2>Error Prediction</h2>    
+        </div>
+        <div class="val">{{error}}</div>
+    </div>
+    <div class="first">
+        <div class="val-head">
+            <h2>Last Error At</h2>
+        </div>
+        <div class="val">{{last}}</div>
+    </div>
+</body>
+</html>
